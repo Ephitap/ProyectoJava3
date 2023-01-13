@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda de libros de Warhammer 40K y Warhammer Fantasy">
+    <link rel="shortcut icon" href="#">
+    <title>The black library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="/img/space.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style= "background-image: url(./img/main.jpg);">
+    <header>
+        <nav id="loginBar" class="navbar navbar-light bg-dark text-white loginBar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/Blacklibrary.webp" alt="logo" width="100"></a>
+                <h1>The black Library</h1>
+                <form class="d-flex">
+
+                    <button id="btnModalLogin" class="btn btn-outline-primary me-2 toggles" type="button" data-bs-toggle="modal"
+                        data-bs-target="#modalLogin">Ingresar</button>
+                    <button id="btnLogout" class="btn btn-outline-secondary d-none toggles" type="button">Desconectar</button>
+                    <p id="nombreUsuario" class="d-none toggles"></p>
+
+                </form>
+            </div>
+        </nav>
+        
+
+
+    </header>
+    <main class="container">
+        <section id="guest" class="toggles">
+            <h2 style="text-align:center;">Bienvenido a la BLack Library</h2>
+            <p  style="text-align:center;">Ingrese usuario para poder ver nuestro catalogo <span class="fakeAncla" data-bs-toggle="modal"
+                    data-bs-target="#modalLogin">identificate</span></p>
+
+
+            <div class="modal " id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="modalLoginLabel">Ingresá</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body py-2 px-4">
+                            <input id="emailLogin" class="form-control my-4" type="email"
+                                placeholder="Ingresa tu correo electrónico" required>
+                            <input id="passwordLogin" class="form-control my-4" type="password"
+                                placeholder="Ingresa tu contraseña" required>
+                        </div>
+                        <div class="modal-footer d-block">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="recordarme">
+                                <label class="form-check-label" for="recordarme">
+                                    Recordarme en este equipo
+                                </label>
+                            </div>
+                            <button class="btn btn-outline-primary" id="login" type="submit">Ingresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="logged" class="d-none toggles">
+            <h2 style="text-align:center;">Bienvenido a la BLack Library</h2>
+            <div id="tarjetas" class="card-group">
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="./img/Warhammer-logo.jpg" alt="" class="logo">
+    
+        </div>
+        <div class="social-icons-container">
+          <a href="" class="social-icon"></a>
+          <a href="" class="social-icon"></a>
+          <a href="" class="social-icon"></a>
+          <a href="" class="social-icon"></a>
+        </div>
+        <ul class="footer-menu-container">
+          <li class="menu-item">GAMES Workshop</li>
+          <li class="menu-item">FORGE WORLD</li>
+          <li class="menu-item">COOKIE NOTICE</li>
+          <li class="menu-item">PRIVACY NOTICE</li>
+          <li class="menu-item">BLACK LIBRARY</li>
+        </ul>
+        <span class="copyright">&copy;© Copyright Games Workshop Limited 2022. GW, Games Workshop, Citadel, White Dwarf,
+          Space Marine, 40K, Warhammer, Warhammer 40,000, the ‘Aquila’ Double-headed Eagle logo,
+          Warhammer Age of Sigmar, Battletome, Stormcast Eternals, and all associated logos,
+          illustrations, images, names, creatures, races, vehicles, locations, weapons, characters,
+          and the distinctive likenesses thereof, are either ® or ™, and/or © Games Workshop Limited,
+          variably registered around the world. All Rights Reserved.</span>
+      </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
